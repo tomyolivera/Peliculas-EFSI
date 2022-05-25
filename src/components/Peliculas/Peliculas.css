@@ -1,0 +1,17 @@
+.scroll-movies{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scroll-movies::-webkit-scrollbar{
+    height: 10px;
+    background: rgb(43, 43, 43);
+    border-radius: 12px;
+}
+
+.scroll-movies::-webkit-scrollbar-thumb{
+    background: rgb(42, 163, 42);
+    border-radius: 12px;
+}

@@ -15,8 +15,8 @@ const Filtros = ({ filtros }) => {
     return (
         <div className="d-flex mx-3">
             {
-                filtros.map(f => (
-                    <Button color="primary">{ f }</Button>
+                filtros.map((f, i) => (
+                    <Button key={i} color="primary">{ f }</Button>
                 ))
             }
         </div>

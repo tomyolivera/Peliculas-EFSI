@@ -1,13 +1,12 @@
+import AppRouter from './AppRouter';
 import Header from './components/Layouts/Header';
-import Peliculas from './components/Peliculas/Peliculas';
 
 const App = () => {
     return (
         <div>
             <Header />
-            <div className="container">
-                {/* <Buscador /> */}
-                <Peliculas />
+            <div className="my-4 px-3">
+                <AppRouter />
             </div>
         </div>
     )
