@@ -7,20 +7,12 @@
 
 .scroll-movies::-webkit-scrollbar{
     height: 10px;
-<<<<<<< HEAD
-    background: rgb(90, 90, 90);
-=======
     background: rgb(168, 168, 168);
->>>>>>> 2f36034 (diseño)
     border-radius: 12px;
 }
 
 .scroll-movies::-webkit-scrollbar-thumb{
-<<<<<<< HEAD
-    background: rgb(30, 30, 30);
-=======
     background: linear-gradient(to right,  #7045AF, #E14594);
->>>>>>> 2f36034 (diseño)
     border-radius: 12px;
 }
 
