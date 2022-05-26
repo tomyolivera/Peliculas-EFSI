@@ -24,7 +24,7 @@ const PeliculasPorTipo = ({ titulo, tipo, filtros }) => {
                 <div className="scroll-movies">
                     {
                         peliculas.map(pelicula => (
-                            <Link to={`/movie/${pelicula.id}`} className='mb-3' style={{ flex: '0 0 auto', textDecoration: 'none', color: 'black' }} key={pelicula.id}>
+                            <Link to={`/movie/${pelicula.id}`} className='mb-3 mx-1' style={{ flex: '0 0 auto', textDecoration: 'none', color: 'black' }} key={pelicula.id}>
                                 <Pelicula pelicula={pelicula} />
                             </Link>
                         ))

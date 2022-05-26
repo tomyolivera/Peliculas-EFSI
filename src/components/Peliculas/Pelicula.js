@@ -1,12 +1,14 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, CardImg } from 'reactstrap'
+import { Card, CardBody, CardImg } from 'reactstrap'
 
 const Pelicula = ({ pelicula }) => {
     return (
-        <Card>
-            <CardImg src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} height="250px" />
-            <CardHeader>{ pelicula.title }</CardHeader>
-            <CardBody>Fecha salida: { pelicula.release_date }</CardBody>
+        <Card style={{ maxWidth: '150px' }}>
+            <CardImg src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} />
+            <CardBody>
+                <h6>{ pelicula.title }</h6>
+                <p>{ pelicula.release_date }</p>
+            </CardBody>
         </Card>
     )
 }
