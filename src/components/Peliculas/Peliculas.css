@@ -15,3 +15,17 @@
     background: rgb(42, 163, 42);
     border-radius: 12px;
 }
+
+.mayor_edad{
+    background-color: #d30000;
+    padding: 6px;
+    width: 50px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.backdrop_image{
+    width: 85%;
+    position: absolute;
+    opacity: 25%;
+}
