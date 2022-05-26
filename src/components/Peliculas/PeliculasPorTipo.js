@@ -18,7 +18,11 @@ const PeliculasPorTipo = ({ titulo, tipo, filtros }) => {
     return (
             <div className="mb-5">
                 <div className="d-flex mb-3">
+<<<<<<< HEAD
                     <h4>{ titulo }</h4>
+=======
+                    <h4 className='align-self-center'>{ titulo }</h4>
+>>>>>>> 2f36034 (diseño)
                     <Filtros filtros={filtros} />
                 </div>
                 <div className="scroll-movies">

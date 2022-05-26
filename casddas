@@ -1,0 +1,29 @@
+[33mcommit b60eb8d0157380b47b557efcf6d3cfc7128476e5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmaster[m[33m)[m
+Author: tomyolivera <tomasolivera27@gmail.com>
+Date:   Wed May 25 23:30:23 2022 -0300
+
+    vista detalles mejorada
+
+[33mcommit f753971693c287bf53b1fcd408104b84cfaae840[m
+Author: tomyolivera <tomasolivera27@gmail.com>
+Date:   Wed May 25 23:19:28 2022 -0300
+
+    vista detalles mejorada
+
+[33mcommit 3ceeee5beb2eff791a85e924b23c679e135291a7[m
+Author: tomyolivera <tomasolivera27@gmail.com>
+Date:   Wed May 25 18:12:43 2022 -0300
+
+    detalle de pelicula .
+
+[33mcommit c8d105d982c558e3224c8a254caa75489139a71e[m
+Author: tomyolivera <tomasolivera27@gmail.com>
+Date:   Wed May 25 16:39:36 2022 -0300
+
+    first commit
+
+[33mcommit 77fe5cb5a242a4dbd35ab61749e26453c74ebeb4[m
+Author: tomyolivera <tomasolivera27@gmail.com>
+Date:   Wed May 25 16:36:48 2022 -0300
+
+    Initialize project using Create React App

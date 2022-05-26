@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PeliculaPorId from './components/Peliculas/PeliculaPorId'
 import Peliculas from './components/Peliculas/Peliculas'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2f36034 (diseño)
 const AppRouter = () => {
     return (
         <BrowserRouter>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Row } from 'reactstrap';
 
 const PeliculaDetalle = ({ pelicula }) => {
+<<<<<<< HEAD
     console.log(pelicula);
     return (
         <>
@@ -9,6 +10,14 @@ const PeliculaDetalle = ({ pelicula }) => {
             <Row className='p-3 d-flex' style={{ position: 'relative' }}>
                 <Col sm="12" md="6" lg="3">
                     <img src={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`} />
+=======
+    return (
+        <>
+            <img alt={pelicula.title} className='backdrop_image' src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${pelicula.backdrop_path}`} />
+            <Row className='p-3 d-flex' style={{ position: 'relative' }}>
+                <Col sm="12" md="6" lg="3">
+                    <img alt={pelicula.title} src={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`} />
+>>>>>>> 2f36034 (diseño)
                 </Col>
                 <Col sm="12" md="6" lg="9" style={{ width: '50%' }}>
                     <h1>{ pelicula.title }</h1> <hr />
