@@ -29,3 +29,8 @@
     position: absolute;
     opacity: 25%;
 }
+
+.filtro-activo{
+    background: linear-gradient(to right,  #7045AF, #E14594);
+    color:white !important;
+}

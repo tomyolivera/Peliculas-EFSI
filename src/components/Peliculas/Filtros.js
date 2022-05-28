@@ -5,23 +5,6 @@ const Button = styled.button`
     padding: 8px 12px;
     border: none;
     color: black;
-<<<<<<< HEAD
-
-    &:hover {
-        background-color: #ddd;
-    }
-`
-
-const Filtros = ({ filtros }) => {
-    return (
-        <div className="d-flex mx-3">
-            {
-                filtros.map((f, i) => (
-                    <Button key={i} color="primary">{ f }</Button>
-                ))
-            }
-        </div>
-=======
     border-radius: 20px;
     background-color: transparent;
 
@@ -41,16 +24,22 @@ const FiltrosStyled = styled.div`
     margin-left: 10px;
 `
 
-const Filtros = ({ filtros }) => {
+const Filtros = ({ filtros, setFiltros, setPeliculasPorFiltro }) => {
+    const handleClick = async filtro => {
+        filtros.map(f => f.active = false)
+        let f = filtros.find(f => f.titulo === filtro.titulo).active = true
+        setFiltros({...filtros, f})
+        await setPeliculasPorFiltro(filtro.group);
+    }
+
     return (
         <FiltrosStyled>
             {
                 filtros.map((f, i) => (
-                    <Button key={i}>{ f }</Button>
+                    <Button key={i} onClick={() => handleClick(f)} className={f.active ? 'filtro-activo' : ''}>{ f.titulo }</Button>
                 ))
             }
         </FiltrosStyled>
->>>>>>> 2f36034 (diseño)
     )
 }
 

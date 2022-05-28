@@ -3,15 +3,20 @@ import { Link } from 'react-router-dom'
 
 import Pelicula from './Pelicula';
 import Filtros from './Filtros';
-import { obtenerPeliculaPorTipo } from '../../Fetch'
+import { obtenerPeliculaPorTipo, obtenerPeliculaPorTipoYFiltro } from '../../Fetch'
 
-const PeliculasPorTipo = ({ titulo, tipo, filtros }) => {
+const PeliculasPorTipo = ({ titulo, tipo, filtros, setFiltros }) => {
     const [peliculas, setPeliculas] = useState([]);
+
+    const setPeliculasPorFiltro = async filtro => {
+        const res = await obtenerPeliculaPorTipoYFiltro(tipo, filtro)
+        setPeliculas(res.data.results)
+    }
 
     useEffect(() => {
         (async function(){
-            const res = await obtenerPeliculaPorTipo(tipo);
-            setPeliculas(res.data.results);
+            const res = await obtenerPeliculaPorTipo(tipo)
+            setPeliculas(res.data.results)
         })();
     }, [])
 
@@ -19,7 +24,7 @@ const PeliculasPorTipo = ({ titulo, tipo, filtros }) => {
             <div className="mb-5">
                 <div className="d-flex mb-3">
                     <h4 className='align-self-center'>{ titulo }</h4>
-                    <Filtros filtros={filtros} />
+                    <Filtros filtros={filtros} setFiltros={setFiltros} setPeliculasPorFiltro={setPeliculasPorFiltro} />
                 </div>
                 <div className="scroll-movies">
                     {

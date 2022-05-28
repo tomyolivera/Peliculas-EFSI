@@ -4,23 +4,34 @@ import PeliculasPorTipo from './PeliculasPorTipo';
 import './Peliculas.css'
 
 const Peliculas = () => {
-    const [filtrosPeliculasActuales] = useState(["En streaming", "En televisión", "En alquiler", "En cines"]);
-    const [filtrosUltimasPeliculas] = useState(["En alquiler", "En cines"]);
+    const [filtrosPeliculasActuales, setFiltrosPeliculasActuales] = useState([
+        {titulo: "En streaming", group: 'streaming', active: false},
+        {titulo: "En televisión", group: 'on-tv', active: false},
+        {titulo: "En alquiler", group: 'for-rent', active: false},
+        {titulo: "En cines", group: 'in-theatres', active: false}
+    ]);
+    const [filtrosUltimasPeliculas, setFiltrosUltimasPeliculas] = useState([
+        {titulo: "En alquiler", group: 'for-rent', active: false},
+        {titulo: "En cines", group: 'in-theatres', active: false}
+    ]);
     const [peliculas] = useState([
         {
             titulo: 'Películas Actuales',
             tipo: 'now_playing',
-            filtros: filtrosPeliculasActuales
+            filtros: filtrosPeliculasActuales,
+            setFiltros: setFiltrosPeliculasActuales
         },
         {
             titulo: 'Más Populares',
             tipo: 'top_rated',
-            filtros: filtrosUltimasPeliculas
+            filtros: filtrosUltimasPeliculas,
+            setFiltros: setFiltrosUltimasPeliculas
         },
         {
             titulo: 'Lo que viene',
             tipo: 'upcoming',
-            filtros: filtrosPeliculasActuales
+            filtros: filtrosPeliculasActuales,
+            setFiltros: setFiltrosUltimasPeliculas
         },
     ]);
 

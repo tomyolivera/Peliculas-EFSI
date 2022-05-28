@@ -1,0 +1,1 @@
+export const acortarTitulo = titulo => titulo.length >= 15 ? titulo.substr(0, 15) + '...' : titulo
