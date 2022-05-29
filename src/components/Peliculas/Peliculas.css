@@ -25,9 +25,15 @@
 }
 
 .backdrop_image{
-    width: 90%;
+    width: 100%;
     position: absolute;
-    opacity: 25%;
+    top: 55px;
+    left: 0;
+    opacity: 35%;
+}
+
+.detail_image{
+    width: 60%;
 }
 
 .filtro-activo{

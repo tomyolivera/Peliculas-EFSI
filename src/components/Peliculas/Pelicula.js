@@ -5,7 +5,7 @@ import { acortarTitulo } from '../../helpers/functions'
 
 const Pelicula = ({ pelicula }) => {
     return (
-        <Card style={{ maxWidth: '180px', maxHeight: '350px', background: '#182952', color: 'white', overflowY: 'hidden' }}>
+        <Card title={pelicula.title} style={{ maxWidth: '180px', maxHeight: '350px', background: '#182952', color: 'white', overflowY: 'hidden' }}>
             <CardImg src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} />
             <CardBody>
                 <h6>{ acortarTitulo(pelicula.title) }</h6>

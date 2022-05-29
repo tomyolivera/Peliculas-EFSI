@@ -5,13 +5,17 @@ import './Peliculas.css'
 
 const Peliculas = () => {
     const [filtrosPeliculasActuales, setFiltrosPeliculasActuales] = useState([
-        {titulo: "En streaming", group: 'streaming', active: false},
+        {titulo: "En streaming", group: 'streaming', active: true},
         {titulo: "En televisión", group: 'on-tv', active: false},
         {titulo: "En alquiler", group: 'for-rent', active: false},
         {titulo: "En cines", group: 'in-theatres', active: false}
     ]);
     const [filtrosUltimasPeliculas, setFiltrosUltimasPeliculas] = useState([
-        {titulo: "En alquiler", group: 'for-rent', active: false},
+        {titulo: "En alquiler", group: 'for-rent', active: true},
+        {titulo: "En cines", group: 'in-theatres', active: false}
+    ]);
+    const [filtrosLoQueViene, setFiltrosLoQueViene] = useState([
+        {titulo: "En alquiler", group: 'for-rent', active: true},
         {titulo: "En cines", group: 'in-theatres', active: false}
     ]);
     const [peliculas] = useState([
@@ -30,8 +34,8 @@ const Peliculas = () => {
         {
             titulo: 'Lo que viene',
             tipo: 'upcoming',
-            filtros: filtrosPeliculasActuales,
-            setFiltros: setFiltrosUltimasPeliculas
+            filtros: filtrosLoQueViene,
+            setFiltros: setFiltrosLoQueViene
         },
     ]);
 

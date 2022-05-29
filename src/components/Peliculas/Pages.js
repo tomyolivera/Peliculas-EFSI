@@ -24,22 +24,19 @@ const FiltrosStyled = styled.div`
     margin-left: 10px;
 `
 
-const Filtros = ({ filtros, setFiltros, setPeliculasPorFiltro }) => {
-    const handleClick = async filtro => {
-        filtros.map(f => f.active = false)
-        let f = filtros.find(f => f.titulo === filtro.titulo).active = true
-        setFiltros({...filtros, f})
+const Pages = ({ page, setPage }) => {
+    const handlePageChange = async p => {
+        console.log(p);
+        setPage(p)
     }
 
     return (
         <FiltrosStyled>
-            {
-                filtros.map((f, i) => (
-                    <Button key={i} onClick={() => handleClick(f)} className={f.active ? 'filtro-activo' : ''}>{ f.titulo }</Button>
-                ))
-            }
+            <Button onClick={() => handlePageChange(1)}>1</Button>
+            <Button onClick={() => handlePageChange(2)}>2</Button>
+            <Button onClick={() => handlePageChange(3)}>3</Button>
         </FiltrosStyled>
     )
 }
 
-export default Filtros
+export default Pages
