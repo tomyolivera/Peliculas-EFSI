@@ -46,3 +46,10 @@
     height: 300px;
     background-color: #000;
 }
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}

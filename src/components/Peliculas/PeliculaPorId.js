@@ -22,7 +22,6 @@ const PeliculaPorId = () => {
     return (
         loading ? <div>Cargando...</div> :
         <div>
-            {/* <Link to="/" className="btn btn-secondary mb-3">Volver</Link><br /> */}
             <PeliculaDetalle pelicula={pelicula} />
         </div>
     )

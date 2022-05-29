@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Col, Row } from 'reactstrap';
 import { convertirTiempo } from '../../helpers/functions';
 
@@ -6,8 +7,10 @@ const PeliculaDetalle = ({ pelicula }) => {
     return (
         <div className='w-100'>
             <img alt={pelicula.title} className='backdrop_image' src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${pelicula.backdrop_path}`} />
+
             <Row className='p-3 d-flex' style={{ position: 'relative' }}>
                 <Col xs="12" md="4" lg="3">
+                    <Link to="/" className="btn btn-secondary mb-3">Volver</Link><br />
                     <img alt={pelicula.title} className="detail_image" src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} />
                 </Col>
                 <Col xs="12" md="8" lg="9" style={{ width: '60%' }}>

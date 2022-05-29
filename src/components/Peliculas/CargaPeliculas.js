@@ -4,7 +4,7 @@ import Pelicula from './Pelicula'
 const CargaPeliculas = () => {
     const pelicula = {
         title: '-------------',
-        release_date: '00-00-0000',
+        release_date: '0000-00-00'
     }
 
     return (
