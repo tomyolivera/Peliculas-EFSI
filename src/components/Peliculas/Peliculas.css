@@ -27,7 +27,7 @@
 .backdrop_image{
     width: 100%;
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 0;
     opacity: 35%;
 }
@@ -39,4 +39,10 @@
 .filtro-activo{
     background: linear-gradient(to right,  #7045AF, #E14594);
     color:white !important;
+}
+
+.img_carga{
+    width: 150px;
+    height: 300px;
+    background-color: #000;
 }

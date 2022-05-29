@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
-import Pelicula from './Pelicula';
-import Filtros from './Filtros';
 import { obtenerPeliculaPorTipo, obtenerPeliculaPorTipoYFiltro } from '../../Fetch'
+import Filtros from './Filtros';
 import Pages from './Pages';
+import LinkPeliculas from './LinkPeliculas';
+import CargaPeliculas from './CargaPeliculas';
 
 const PeliculasPorTipo = ({ titulo, tipo, filtros, setFiltros }) => {
     const [peliculas, setPeliculas] = useState([]);
@@ -33,14 +33,7 @@ const PeliculasPorTipo = ({ titulo, tipo, filtros, setFiltros }) => {
                     <Pages page={page} setPage={setPage} />
                 </div>
                 <div className="scroll-movies">
-                    {
-                        loading ? (<> Cargando... </>)
-                        : peliculas.map(pelicula => (
-                            <Link to={`/movie/${pelicula.id}`} className='mb-3 mx-1' style={{ flex: '0 0 auto', textDecoration: 'none', color: 'black' }} key={pelicula.id}>
-                                <Pelicula pelicula={pelicula} />
-                            </Link>
-                        ))
-                    } 
+                    { loading ? <CargaPeliculas /> : peliculas.map(pelicula => <LinkPeliculas pelicula={pelicula} />) } 
                 </div>
             </div>
     )
