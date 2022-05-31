@@ -1,16 +1,12 @@
-import { Navbar, NavbarBrand, NavLink } from "reactstrap";
+import { Container, Navbar, NavbarBrand, NavLink } from "reactstrap";
 
 const Header = () => {
     return (
-        <div>
-            <Navbar style={{ backgroundColor: '#182952' }}  dark>
-                <NavbarBrand href="/">
-                    Reactstrap
-                </NavbarBrand>
-
-                <NavLink style={{color:"white"}} href="/">Peliculas</NavLink>
-            </Navbar>
-        </div>
+        <Navbar style={{ backgroundColor: '#182952' }}  dark>
+            <NavbarBrand href="/">
+                <img src="/idf.png" width="25%" className="mx-5" />
+            </NavbarBrand>
+        </Navbar>
     )
 }
 
